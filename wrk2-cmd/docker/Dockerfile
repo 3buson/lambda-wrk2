@@ -1,4 +1,4 @@
-FROM amazon/aws-cli
+FROM --platform=linux/amd64 amazon/aws-cli
 
 # Setup wrk2
 COPY wrk2 /src/wrk2

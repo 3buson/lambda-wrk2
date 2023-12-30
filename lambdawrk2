@@ -65,7 +65,7 @@ function setup() {
 
 	# Create AWS resources
 	cd "$CDK_DIR"
-	cdk deploy
+	cdk deploy --profile $AWS_PROFILE
 }
 
 # destroy command
@@ -74,7 +74,7 @@ function destroy() {
 
 	# Destroy AWS resources
 	cd "$CDK_DIR"
-	cdk destroy
+	cdk destroy --profile $AWS_PROFILE
 }
 
 # run command

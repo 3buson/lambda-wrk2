@@ -6,6 +6,10 @@
       "Effect": "Allow",
       "Action": [
         "cloudformation:*",
+        "ecr:GetAuthorizationToken",
+        "ecr:PutImageScanningConfiguration",
+        "ecr:TagResource",
+        "ecr:CreateRepository",
         "ecr:SetRepositoryPolicy",
         "ecr:DescribeImages",
         "ecr:DescribeRepositories",
