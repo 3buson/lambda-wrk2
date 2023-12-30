@@ -44,7 +44,7 @@ Create IAM user attached following settings in your AWS Account.
 
 * Allow programmatic access.
 * Attach policies by [lambda-wrk2-policy.json](aws-cdk/lambda-wrk2-policy.json).
-* Attach the AWSLambdaRole. See the image for more details.
+* Attach the AWSLambdaRole. See the [image](https://github.com/3buson/lambda-wrk2/blob/master/wrk_user_permissions.png) for more details.
 
 Ref:
 * [Creating an IAM user in your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
