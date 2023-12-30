@@ -47,7 +47,7 @@ function setupCdk() {
 function setupWrk2() {
 	# Clone wrk2
 	if [[ ! -e "${WRK2_CMD_DIR}/docker/wrk2" ]]; then
-		git clone git@github.com:giltene/wrk2.git "${WRK2_CMD_DIR}/docker/wrk2"
+		git clone git@github.com:3buson/wrk2.git "${WRK2_CMD_DIR}/docker/wrk2"
 	fi
 
 	# Install node modules
