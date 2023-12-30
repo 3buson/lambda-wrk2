@@ -6,6 +6,9 @@
       "Effect": "Allow",
       "Action": [
         "cloudformation:*",
+        "iam:CreateServiceLinkedRole",
+        "ecr:*",
+        "cloudtrail:LookupEvents",
         "ecr:GetAuthorizationToken",
         "ecr:PutImageScanningConfiguration",
         "ecr:TagResource",
