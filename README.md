@@ -32,7 +32,7 @@
 * [Node.js](https://nodejs.org/en/) v14.15.3, npm 6.14.9
 * [Docker](https://www.docker.com/) version 19.03.12, build 48a66213fe
 * [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html) 1.78.0 (build 2c74f4c)
-* [AWS IAM user credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html) 
+* [AWS IAM user credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html)
 
 
 ### 1. Create IAM user
@@ -44,6 +44,7 @@ Create IAM user attached following settings in your AWS Account.
 
 * Allow programmatic access.
 * Attach policies by [lambda-wrk2-policy.json](aws-cdk/lambda-wrk2-policy.json).
+* Attach the AWSLambdaRole. See the image for more details.
 
 Ref:
 * [Creating an IAM user in your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
@@ -133,7 +134,7 @@ For more information, see comments in [`.env.example`](.env.example) and [`wrk2`
 
 ### 2. Set wrk2 script
 
-Set request properties in wrk2 `lua` script and its' file path to `.env`.  
+Set request properties in wrk2 `lua` script and its' file path to `.env`.
 The script examples is in `wrk2-cmd/script/wrk2`. For more information, see  [`wrk2 scripts`](https://github.com/giltene/wrk2/tree/master/scripts).
 
 ### 3. Run wrk2
@@ -142,7 +143,7 @@ Run wrk2 on Lambda.
 
 ```
 # Run
-./lambda-wrk2 run
+./lambdawrk2 run
 ```
 
 The outputs will look like this.
@@ -218,7 +219,7 @@ Running 5s test @ https://...herokuapp.com
 |-- aws-cdk             <-- AWS CDK Kit with TypeScrpit
 |   |-- .eslintrc.js
 |   |-- .gitignore
-|   |-- .npmignore      
+|   |-- .npmignore
 |   |-- .prettierrc.js
 |   |-- README.md
 |   |-- bin
@@ -229,7 +230,7 @@ Running 5s test @ https://...herokuapp.com
 |   |-- lib                         <-- Fragments of CDK script
 |   |   `-- lambda-wrk2-service.ts  <-- lambda-wrk2 Stack CDK script
 |   |-- package.json
-|   |-- test                <-- Jest scripts 
+|   |-- test                <-- Jest scripts
 |   `-- tsconfig.json
 |
 |-- docs
@@ -250,7 +251,7 @@ Running 5s test @ https://...herokuapp.com
         |
         |-- src         <-- Fragments of script to use in lambdawrk2 command.
         |   |-- index.ts
-        |   `-- wrk2cmd.ts 
+        |   `-- wrk2cmd.ts
         |
         `-- wrk2        <-- wrk2 lua scripts
             |-- post.example.lua
